@@ -8,13 +8,50 @@ body {
 
 ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100vh;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 /* Header Logo */
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
 
 .header-logo,
 .footer-logo {
@@ -27,11 +64,30 @@ a {
   color: #4d5ae5;
 }
 
+.header-logo {
+  margin-right: 76px;
+}
+
 .header-logo .studio {
   color: #2e2f42;
 }
 
 /* Navigation and Address */
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  gap: 40px;
+}
+
+.contacts {
+  display: flex;
+  gap: 40px;
+}
 
 .navigation-link,
 .contacts-link {
@@ -43,10 +99,12 @@ a {
 .navigation-link {
   font-weight: 500;
   color: #2e2f42;
+  padding: 24px 0;
 }
 
 .contacts-link {
   color: #434455;
+  padding: 24px 0;
 }
 
 .navigation-link:hover,
@@ -62,8 +120,22 @@ a {
 
 /* Banner Section */
 
+.container-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
 .banner {
   background-color: #2e2f42;
+  height: 600px;
+  padding-top: 188px;
+  padding-left: 472px;
+  padding-right: 472px;
+  padding-bottom: 292px;
+  /* display: flex; */
 }
 
 .banner-head {
@@ -73,6 +145,8 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
+  max-height: 120px;
+  max-width: 496px;
 }
 
 .banner-button {
@@ -83,6 +157,10 @@ a {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px;
 }
 
 .banner-button:hover,
@@ -92,13 +170,31 @@ a {
 
 /* Principles Section */
 
-.principles-head {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container-principles {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.principles-list {
+  display: flex;
+  gap: 24px;
+}
+
+.principles-list-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .principles-list-item-head {
@@ -107,6 +203,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .principles-list-item-text {
@@ -122,6 +219,12 @@ a {
   background-color: #f4f4fd;
 }
 
+.team-list {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 120px;
+}
+
 .team-head {
   font-weight: 700;
   font-size: 36px;
@@ -130,10 +233,26 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 70px;
+  padding-top: 120px;
+}
+
+.container-team-ph-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 0;
 }
 
 .team-list-item {
   background-color: #ffffff;
+  width: calc((100% - 96px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-list-item-head {
@@ -163,6 +282,16 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-top: 120px;
+  padding-bottom: 70px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+  padding-bottom: 120px;
 }
 
 .portfolio-list-item-head {
@@ -171,6 +300,21 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+}
+
+.portfolio-list-item {
+  border: 1px solid var(--CORNFLOWER, #e7e9fc);
+  width: calc((100% - 48px) / 3);
+}
+
+.container-portfolio-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  padding: 32px 16px;
 }
 
 .portfolio-list-item-text {
@@ -190,9 +334,27 @@ a {
   color: #f4f4fd;
 }
 
+.container-logo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-logo {
+  margin-left: 156px;
+  margin-top: 101.5px;
+  margin-right: 1169px;
+  margin-bottom: 17.5px;
+}
+
 .footer-text {
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  width: 264px;
+  height: 72px;
+  margin-left: 156px;
+  margin-right: 1020px;
+  padding-bottom: 100px;
 }
