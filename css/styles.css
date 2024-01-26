@@ -314,6 +314,7 @@ img {
   align-self: stretch;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-list-item-head {
@@ -338,18 +339,12 @@ img {
   color: #f4f4fd;
 }
 
-.container-logo-footer {
+.footer-logo {
   display: inline-block;
   margin-bottom: 16px;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer-logo {
   margin-left: 156px;
   margin-top: 101.5px;
   margin-right: 1169px;
-  margin-bottom: 17.5px;
 }
 
 .footer-text {
@@ -359,6 +354,4 @@ img {
   letter-spacing: 0.02em;
   max-width: 264px;
   margin-left: 156px;
-  margin-right: 1020px;
-  padding-bottom: 100px;
 }
